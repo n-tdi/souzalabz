@@ -9,7 +9,7 @@ export default function Home() {
         {/* Logo */}
         <div className="w-96 h-96 sm:w-full sm:h-full md:max-w-3xl md:max-h-3xl relative">
           <Image
-            src="/SouzaLabzLogo1.png"
+            src="/SouzaLabzLogo2.png"
             alt="SouzaLabz Logo"
             fill
             className="object-contain drop-shadow-2xl"
