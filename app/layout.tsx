@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   description: "Discover premium 3D-printed protective pads and custom upgrades for electric unicycles. Engineered for durability, comfort, and style. SouzaLabz - Elevate your ride.",
   keywords: ["electric unicycle", "EUC pads", "protective gear", "3D printed upgrades", "unicycle accessories", "custom pads"],
   authors: [{ name: "SouzaLabz" }],
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     title: "SouzaLabz | Premium Electric Unicycle Upgrades",
     description: "Discover premium 3D-printed protective pads and custom upgrades for electric unicycles. Engineered for durability, comfort, and style.",
