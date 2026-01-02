@@ -24,3 +24,33 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Neon text effect */
+.neon-text {
+  color: #f5f5dc;
+  text-shadow: 
+    0 0 8px rgba(255, 255, 255, 0.7),
+    0 0 16px rgba(255, 255, 255, 0.5),
+    0 0 24px rgba(255, 255, 255, 0.3);
+  animation: moderate-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes moderate-glow {
+  0%, 100% {
+    text-shadow: 
+      0 0 8px rgba(255, 255, 255, 0.7),
+      0 0 16px rgba(255, 255, 255, 0.5),
+      0 0 24px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow: 
+      0 0 12px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(255, 255, 255, 0.6),
+      0 0 32px rgba(255, 255, 255, 0.4);
+  }
+}
+
+.letter-spacing-wide {
+  letter-spacing: 0.15em;
+}
+
