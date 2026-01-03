@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "SouzaLabz | Premium Electric Unicycle Upgrades",
-  description: "Discover premium 3D-printed protective pads and custom upgrades for electric unicycles. Engineered for durability, comfort, and style. SouzaLabz - Elevate your ride.",
+  description: "No paywalls. No locks. Every file runs free, they're meant to be remixed, reworked, and pushed harder by the community. We build better when everyone has access.",
   keywords: ["electric unicycle", "EUC pads", "protective gear", "3D printed upgrades", "unicycle accessories", "custom pads"],
   authors: [{ name: "SouzaLabz" }],
   icons: {
@@ -29,12 +29,12 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "SouzaLabz | Premium Electric Unicycle Upgrades",
-    description: "Discover premium 3D-printed protective pads and custom upgrades for electric unicycles. Engineered for durability, comfort, and style.",
+    description: "No paywalls. No locks. Every file runs free, they're meant to be remixed, reworked, and pushed harder by the community. We build better when everyone has access.",
     url: "https://souzalabz.com",
     siteName: "SouzaLabz",
     images: [
       {
-        url: "/SouzaLabzLogo1.png",
+        url: "/SouzaLabzLogo3.png",
         width: 1200,
         height: 630,
         alt: "SouzaLabz Logo",
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "SouzaLabz | Premium Electric Unicycle Upgrades",
-    description: "Discover premium 3D-printed protective pads and custom upgrades for electric unicycles. Engineered for durability, comfort, and style.",
-    images: ["/SouzaLabzLogo1.png"],
+    description: "No paywalls. No locks. Every file runs free, they're meant to be remixed, reworked, and pushed harder by the community. We build better when everyone has access.",
+    images: ["/SouzaLabzLogo3.png"],
   },
   viewport: "width=device-width, initial-scale=1.0",
   robots: {
