@@ -94,19 +94,19 @@ export default function RootLayout({
               </div>
             </Link>
 
-            <nav className="flex items-center gap-4 font-mono text-xs text-white/75">
-              <a className="rounded-md border border-transparent px-2 py-1 transition hover:border-white/25 hover:text-white" href="#models">Vault</a>
-              <a className="rounded-md border border-transparent px-2 py-1 transition hover:border-white/25 hover:text-white" href="#about">About</a>
+            <nav className="flex items-center gap-1 font-mono text-xs text-white/75 sm:gap-4">
+              <a className="rounded-md border border-transparent px-1.5 py-1 transition hover:border-white/25 hover:text-white sm:px-2" href="#models">Vault</a>
+              <a className="rounded-md border border-transparent px-1.5 py-1 transition hover:border-white/25 hover:text-white sm:px-2" href="#about">About</a>
               <a
-                className="rounded-md border border-transparent px-2 py-1 transition hover:border-white/25 hover:text-white"
-                href="https://cults3d.com/"
+                className="rounded-md border border-transparent px-1.5 py-1 transition hover:border-white/25 hover:text-white sm:px-2"
+                href="https://cults3d.com/en/nikkasouza"
                 target="_blank"
                 rel="noreferrer"
               >
                 Cults3D ↗
               </a>
               <a
-                className="hidden rounded-md border border-transparent px-2 py-1 transition hover:border-fuchsia-400/40 hover:text-white sm:inline-flex"
+                className="hidden rounded-md border border-transparent px-1.5 py-1 transition hover:border-fuchsia-400/40 hover:text-white sm:inline-flex sm:px-2"
                 href="https://t.me/souzalabzchat"
                 target="_blank"
                 rel="noreferrer"

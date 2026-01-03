@@ -82,28 +82,31 @@ export default async function Page() {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-nowrap gap-2 overflow-x-auto sm:flex-wrap sm:overflow-visible sm:gap-3">
               <a
                 href="#models"
-                className="flex items-center gap-2 rounded-full border border-emerald-300/50 bg-emerald-400/10 px-4 py-2 font-mono text-xs uppercase tracking-widest text-emerald-100 transition hover:-translate-y-0.5 hover:shadow-[0_0_24px_rgba(52,211,153,0.45)]"
+                className="flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full border border-emerald-300/50 bg-emerald-400/10 px-3 py-2 font-mono text-[11px] uppercase tracking-[0.12em] text-emerald-100 transition hover:-translate-y-0.5 hover:shadow-[0_0_24px_rgba(52,211,153,0.45)] sm:px-4 sm:text-xs sm:tracking-widest"
               >
-                Browse vault →
+                <span className="sm:hidden">Browse →</span>
+                <span className="hidden sm:inline">Browse vault →</span>
               </a>
               <a
                 href={user?.shortUrl ?? "https://cults3d.com/"}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-mono text-xs uppercase tracking-widest text-white/80 transition hover:-translate-y-0.5 hover:border-white/30"
+                className="flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-3 py-2 font-mono text-[11px] uppercase tracking-[0.12em] text-white/80 transition hover:-translate-y-0.5 hover:border-white/30 sm:px-4 sm:text-xs sm:tracking-widest"
               >
-                Cults profile ↗
+                <span className="sm:hidden">Cults ↗</span>
+                <span className="hidden sm:inline">Cults profile ↗</span>
               </a>
               <a
                 href="https://t.me/souzalabzchat"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 rounded-full border border-fuchsia-400/40 bg-fuchsia-500/10 px-4 py-2 font-mono text-xs uppercase tracking-widest text-fuchsia-100 transition hover:-translate-y-0.5 hover:shadow-[0_0_24px_rgba(236,72,153,0.35)]"
+                className="flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full border border-fuchsia-400/40 bg-fuchsia-500/10 px-3 py-2 font-mono text-[11px] uppercase tracking-[0.12em] text-fuchsia-100 transition hover:-translate-y-0.5 hover:shadow-[0_0_24px_rgba(236,72,153,0.35)] sm:px-4 sm:text-xs sm:tracking-widest"
               >
-                Telegram chat ↗
+                <span className="sm:hidden">Telegram ↗</span>
+                <span className="hidden sm:inline">Telegram chat ↗</span>
               </a>
             </div>
 
@@ -137,7 +140,7 @@ export default async function Page() {
                 <span className="text-emerald-300">stable</span>
               </div>
               <div className="h-2 rounded-full bg-white/10">
-                <div className="h-full w-[78%] rounded-full bg-gradient-to-r from-emerald-300 via-cyan-300 to-fuchsia-400" />
+                <div className="h-full w-[100%] rounded-full bg-gradient-to-r from-emerald-300 via-cyan-300 to-fuchsia-400" />
               </div>
 
               {featured.length ? (
@@ -341,7 +344,7 @@ export default async function Page() {
               <div className="rounded-xl border border-white/10 bg-white/5 p-3">
                 <div className="text-white/45">CULTS URL</div>
                 <a
-                  className="text-lg text-emerald-200 underline decoration-dotted underline-offset-4 hover:text-emerald-100"
+                  className="text-base text-emerald-200 underline decoration-dotted underline-offset-4 hover:text-emerald-100"
                   href={user?.shortUrl ?? "https://cults3d.com/en/users/nikkasouza"}
                   target="_blank"
                   rel="noreferrer"
