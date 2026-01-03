@@ -56,7 +56,9 @@ export default async function Page() {
     },
     { views: 0, downloads: 0, revenueCents: 0 }
   );
-  const featured = batch.results.slice(0, 2);
+  const featured = [...batch.results]
+    .sort((a, b) => (b.downloadsCount ?? 0) - (a.downloadsCount ?? 0))
+    .slice(0, 2);
   const currencySymbol = ({ USD: "$", EUR: "€", GBP: "£" } as const)[currency] ?? "$";
 
   return (
