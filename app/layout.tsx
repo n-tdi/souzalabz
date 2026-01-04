@@ -99,7 +99,7 @@ export default function RootLayout({
               <a className="rounded-md border border-transparent px-1.5 py-1 transition hover:border-white/25 hover:text-white sm:px-2" href="#about">About</a>
               <a
                 className="rounded-md border border-transparent px-1.5 py-1 transition hover:border-white/25 hover:text-white sm:px-2"
-                href="https://cults3d.com/en/nikkasouza"
+                href="https://cults3d.com/en/NikkaSouza"
                 target="_blank"
                 rel="noreferrer"
               >

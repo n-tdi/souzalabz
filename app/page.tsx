@@ -31,7 +31,7 @@ function slugFromUrl(url: string) {
 export default async function Page() {
   const locale = (process.env.CULTS_LOCALE ?? "EN") as CultsLocale;
   const currency = (process.env.CULTS_CURRENCY ?? "USD") as CultsCurrency;
-  const nick = process.env.CULTS_NICK ?? "nikkasouza";
+  const nick = process.env.CULTS_NICK ?? "NikkaSouza";
 
   // Fetch everything server-side directly from Cults GraphQL
   const [batchData, userData] = await Promise.all([
@@ -347,7 +347,7 @@ export default async function Page() {
                 <div className="text-white/45">CULTS URL</div>
                 <a
                   className="text-base text-emerald-200 underline decoration-dotted underline-offset-4 hover:text-emerald-100"
-                  href={user?.shortUrl ?? "https://cults3d.com/en/users/nikkasouza"}
+                  href={user?.shortUrl ?? "https://cults3d.com/en/users/NikkaSouza"}
                   target="_blank"
                   rel="noreferrer"
                 >
