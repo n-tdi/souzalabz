@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://souzalabz.com"),
   title: "SouzaLabz | Premium Electric Unicycle Upgrades",
   description: "No paywalls. No locks. Every file runs free, they're meant to be remixed, reworked, and pushed harder by the community. We build better when everyone has access.",
   keywords: ["electric unicycle", "EUC pads", "protective gear", "3D printed upgrades", "unicycle accessories", "custom pads"],
@@ -48,7 +49,6 @@ export const metadata: Metadata = {
     description: "No paywalls. No locks. Every file runs free, they're meant to be remixed, reworked, and pushed harder by the community. We build better when everyone has access.",
     images: ["/SouzaLabzLogo3.png"],
   },
-  viewport: "width=device-width, initial-scale=1.0",
   robots: {
     index: true,
     follow: true,
@@ -57,6 +57,11 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
