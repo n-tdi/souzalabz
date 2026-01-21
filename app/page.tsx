@@ -147,7 +147,7 @@ export default async function Page() {
 
               {featured.length ? (
                 <div className="grid gap-3 sm:grid-cols-2">
-                  {featured.map((c) => {
+                  {featured.map((c, idx) => {
                     const img = c.illustrationImageUrl || c.blueprints?.[0]?.imageUrl;
                     const slug = slugFromUrl(c.url);
                     return (
@@ -162,6 +162,8 @@ export default async function Page() {
                               src={img}
                               alt={c.name}
                               fill
+                              loading={idx === 0 ? "eager" : "lazy"}
+                              priority={idx === 0}
                               className="object-cover opacity-95 transition duration-300 group-hover:opacity-100"
                             />
                           ) : (
