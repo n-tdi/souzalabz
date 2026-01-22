@@ -121,7 +121,7 @@ export default async function DesignPage({
                   <div className="font-mono text-[11px] uppercase text-white/50">Telemetry</div>
                   <div className="glow font-mono text-xl text-white">Signal readout</div>
                 </div>
-                <div className="rounded-full border border-emerald-400/40 bg-emerald-400/10 px-3 py-1 font-mono text-[11px] uppercase text-emerald-100">Price {price}</div>
+                <div className="rounded-full border border-emerald-400/40 bg-emerald-400/10 px-3 py-1 font-mono text-[11px] uppercase text-emerald-100">ALWAYS FREE</div>
               </div>
 
               <div className="mt-4 grid grid-cols-2 gap-3 font-mono text-xs text-white/70">
