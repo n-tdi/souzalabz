@@ -16,20 +16,20 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://souzalabz.com"),
-  title: "SouzaLabz | Premium Electric Unicycle Upgrades",
+  title: "SouzaLabz | Open Source Electric Unicycle Upgrades",
   description: "No paywalls. No locks. Every file runs free, they're meant to be remixed, reworked, and pushed harder by the community. We build better when everyone has access.",
   keywords: ["electric unicycle", "EUC pads", "protective gear", "3D printed upgrades", "unicycle accessories", "custom pads"],
   authors: [{ name: "SouzaLabz" }],
   icons: {
     icon: [
-      { url: "/favicon.ico", type: "image/x-icon", sizes: "32x32" },
+      { url: "/favicon.png", type: "image/png", sizes: "512x512" },
       { url: "/icon.png", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/favicon.ico",
+    shortcut: "/favicon.png",
     apple: "/icon.png",
   },
   openGraph: {
-    title: "SouzaLabz | Premium Electric Unicycle Upgrades",
+    title: "SouzaLabz | Open Source Electric Unicycle Upgrades",
     description: "No paywalls. No locks. Every file runs free, they're meant to be remixed, reworked, and pushed harder by the community. We build better when everyone has access.",
     url: "https://souzalabz.com",
     siteName: "SouzaLabz",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SouzaLabz | Premium Electric Unicycle Upgrades",
+    title: "SouzaLabz | Open Source Electric Unicycle Upgrades",
     description: "No paywalls. No locks. Every file runs free, they're meant to be remixed, reworked, and pushed harder by the community. We build better when everyone has access.",
     images: ["/SouzaLabzLogo3.png"],
   },
