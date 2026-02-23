@@ -49,3 +49,16 @@ export const USER_HEADER = `
     }
   }
 `;
+
+export const MY_DONOR_NAMES = `
+  query MyDonorNames($offset: Int!) {
+    myself {
+      salesBatch(offset: $offset) {
+        total
+        results {
+          user { nick }
+        }
+      }
+    }
+  }
+`;

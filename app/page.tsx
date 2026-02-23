@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import DonationsThankYouCard from "@/app/_components/donations-thank-you-card";
 import { CultsCurrency, CultsLocale, cultsGraphQL } from "@/lib/cults";
-import { MY_CREATIONS, USER_HEADER } from "@/lib/queries";
+import { MY_CREATIONS, MY_DONOR_NAMES, USER_HEADER } from "@/lib/queries";
 
 type Creation = {
   name: string;
@@ -34,7 +35,7 @@ export default async function Page() {
   const nick = process.env.CULTS_NICK ?? "NikkaSouza";
 
   // Fetch everything server-side directly from Cults GraphQL
-  const [batchData, userData] = await Promise.all([
+  const [batchData, userData, donorData] = await Promise.all([
     cultsGraphQL<{
       myself: { creationsBatch: { total: number; results: Creation[] } };
     }>(MY_CREATIONS, { limit: 60, offset: 0, locale, currency }),
@@ -43,6 +44,14 @@ export default async function Page() {
       USER_HEADER,
       { nick }
     ),
+    cultsGraphQL<{
+      myself: {
+        salesBatch: {
+          total: number;
+          results: { user?: { nick?: string | null } | null }[];
+        };
+      };
+    }>(MY_DONOR_NAMES, { offset: 0 }),
   ]);
 
   const batch = batchData.myself.creationsBatch;
@@ -60,6 +69,13 @@ export default async function Page() {
     .sort((a, b) => (b.downloadsCount ?? 0) - (a.downloadsCount ?? 0))
     .slice(0, 2);
   const currencySymbol = ({ USD: "$", EUR: "€", GBP: "£" } as const)[currency] ?? "$";
+  const donorNames = Array.from(
+    new Set(
+      donorData.myself.salesBatch.results
+        .map((sale) => sale.user?.nick?.trim())
+        .filter((name): name is string => Boolean(name))
+    )
+  ).sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
 
   return (
     <main className="mx-auto max-w-6xl px-4 pb-16 pt-10">
@@ -125,10 +141,10 @@ export default async function Page() {
                 <div className="text-[11px] uppercase text-white/50">Downloads</div>
                 <div className="text-xl font-semibold text-white/90">{formatNumber(totals.downloads)}</div>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-3">
-                <div className="text-[11px] uppercase text-white/50">Donations</div>
-                <div className="text-xl font-semibold text-white/90">{currencySymbol}{money(totals.revenueCents)}</div>
-              </div>
+              <DonationsThankYouCard
+                amountLabel={`${currencySymbol}${money(totals.revenueCents)}`}
+                donorNames={donorNames}
+              />
             </div>
           </div>
 
