@@ -140,7 +140,7 @@ export default function RootLayout({
         {children}
 
         <footer className="mx-auto max-w-6xl px-4 pb-10 pt-6 text-center font-mono text-xs text-white/60">
-          <div className="mb-1 glow text-white/80">© {new Date().getFullYear()} SOUZALABZ</div>
+          <div className="mb-1 glow text-white/80">© {new Date().getFullYear()} SOUZALABZ LLC</div>
           <div className="opacity-80">built in the noise ✦ printed in TPU</div>
         </footer>
       </body>
